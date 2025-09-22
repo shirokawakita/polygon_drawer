@@ -8,10 +8,10 @@ function initMap() {
     // 地図の作成（東京を中心に）
     map = L.map('map').setView([35.6762, 139.6503], 10);
 
-    // OpenStreetMapタイルレイヤーを追加
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
-        maxZoom: 19
+    // 国土地理院地図タイルレイヤーを追加
+    L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
+        attribution: '© 国土地理院',
+        maxZoom: 18
     }).addTo(map);
 
     // 描画されたアイテムを保存するレイヤーグループ
